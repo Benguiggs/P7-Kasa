@@ -3,6 +3,8 @@
 .banner {
 position: relative;
 margin:auto;
+min-height: 140px;
+background-image: url(../assets/banner.png);
 background-position: center;
 background-size: cover;
 display:grid;

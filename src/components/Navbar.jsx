@@ -10,7 +10,7 @@ function Navbar() {
     <nav className="navbar">
       <NavLink to="/">
         <div className='navbar__logo'>
-<img src="logo.png" alt="Logo de l'agence Kasa"/>
+        <img src='logo.png' alt="logo l'agence"/>
         </div>
         </NavLink>
         <NavLink to="/">
