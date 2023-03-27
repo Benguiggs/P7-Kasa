@@ -1,6 +1,5 @@
 import React from 'react';
-import "./CardGrid.css";
-import "./Card.css";
+import "./CardGrid.scss";
 import Card from "./Card.jsx";
 
 function CardGrid() {

@@ -1,6 +1,8 @@
+@use "../scss/colors.scss" as colors;
+
 .footer {
-    background-color: black;
-    color: white;
+    background-color: colors.$contrast-black;
+    color: colors.$contrast-white;
     padding: 20px;
     text-align: center;
     min-height: 100px;

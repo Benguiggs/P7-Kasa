@@ -1,5 +1,7 @@
+@use "../scss/colors.scss" as colors;
+
 .grid {
-    background-color: beige;
+    background-color: colors.$background-card;
     min-height: 50vh;
     border-radius: 2rem;
     display: flex;
@@ -12,7 +14,7 @@
 @media screen and (width <= 768px) {
     .grid {
         justify-content: center;
-        background-color: white ;
+        background-color: colors.$contrast-white;
         padding: 0;
     }
 }

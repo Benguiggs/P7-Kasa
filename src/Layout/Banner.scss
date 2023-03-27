@@ -1,0 +1,22 @@
+@use '../scss/colors.scss' as colors;
+
+.banner {
+position: relative;
+margin:auto;
+background-position: center;
+background-size: cover;
+display:grid;
+padding-inline: 2rem;
+max-width: 100%;
+place-items: center;
+color: colors.$contrast-white;
+margin-bottom: 2rem;
+border-radius: 2rem;
+&::before {
+    content: "";
+    inset: 0;
+    position: absolute;
+    border-radius: 2rem;
+    opacity: 0.6;
+}
+}
