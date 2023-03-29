@@ -7,6 +7,10 @@
     color: colors.$color-primary;
     font-weight: 700;
     gap: 2rem;
+    @media screen and (width <= 768px){
+        text-transform: uppercase;
+        font-weight: 400;
+    }
     & > *:first-child {
         margin-right: auto;
     }

@@ -5,6 +5,9 @@ color: colors.$color-primary;
 
   .Apartment__area {
     display:flex;
-    gap: 3rem;
+    gap: 1.5rem;
+    @media screen and (width <= 768px) {
+        flex-direction: column;
+    }
   }
 }
