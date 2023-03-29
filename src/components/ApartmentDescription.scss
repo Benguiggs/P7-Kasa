@@ -1,0 +1,29 @@
+@use "../scss/colors.scss" as colors;
+
+.Apartment__description {
+    p {
+        margin-block: 0;
+    }
+    .description__title{
+    background-color: colors.$color-primary;
+    color: colors.$contrast-white;
+    padding: 0.5em 1em;
+    border-radius: 0.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    i {
+        font-size: 1rem;
+        cursor: pointer;
+    }
+  }
+  .description__content {
+    position: relative;
+    top: -0.2rem;
+    z-index: -1;
+    background-color: colors.$background-card;
+    color: colors.$color-primary;
+    padding: 1rem;
+    border-radius: 0.5rem
+  }
+}
