@@ -1,17 +1,17 @@
 import React from 'react';
-import { ApartmentBanner } from '../components/ApartmentBanner';
+import { image__banner } from '../components/ImageBanner';
 import { ApartmentHeader } from '../components/ApartmentHeader';
-import { ApartmentDescription } from '../components/ApartmentDescription';
+import { PanelDescription } from '../components/PanelDescription';
 import "../pages/ApartmentPage.scss";
 
 function ApartmentPage() {
   return (
     <div className='apartment__page'>
-<ApartmentBanner />
+<image__banner />
 <ApartmentHeader />
 <div className='Apartment__area'>
-<ApartmentDescription />
-<ApartmentDescription />
+<PanelDescription />
+<PanelDescription />
 </div>
 </div>
   );

@@ -1,10 +1,11 @@
 @use "../scss/colors.scss" as colors;
 
-.Apartment__description {
+.PanelDescription {
+  margin-bottom: 1rem;
     p {
         margin-block: 0;
     }
-    .description__title{
+    .panel__description__title{
     background-color: colors.$color-primary;
     color: colors.$contrast-white;
     padding: 0.5em 1em;
@@ -17,7 +18,7 @@
         cursor: pointer;
     }
   }
-  .description__content {
+  .panel__description__content {
     position: relative;
     top: -0.2rem;
     z-index: -1;

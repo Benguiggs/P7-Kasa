@@ -1,9 +1,9 @@
 import React from 'react';
-import "../components/ApartmentBanner.scss"
+import "../components/ImageBanner.scss"
 
-export function ApartmentBanner() {
+export function ImageBanner() {
   return (
-    <div className='apartment__banner'>
+    <div className='Image__banner'>
     <img src="../AppartementBackground.png" alt="Banniére d'un appartement"/>
 </div>
   );

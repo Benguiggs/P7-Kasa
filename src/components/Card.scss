@@ -9,11 +9,12 @@
     align-items: end;
     min-width: 200px;
     min-height: 200px;
+    background-size: cover;
     @media screen and (width <= 768px) {
         .card {
             flex-basis: 100%;
           }
-        }        
+        }      
     & &__subtitle {
         width: 50%;
         margin-inline-start: .5rem;

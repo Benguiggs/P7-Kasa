@@ -8,6 +8,7 @@ function Card() {
   return (
     <Link to="/appartement">
     <div className='card'>
+      <img className='card__image' src="" alt="" />
       <div className="card__subtitle">Titre de la location</div>
       </div>
       </Link>
