@@ -6,6 +6,7 @@ import Footer from "../layout/Footer";
 import Main from "../layout/Main";
 import ApartmentPage from "../pages/ApartmentPage";
 import About from "../pages/About";
+import { ErrorPage } from "../pages/ErrorPage"
 
 const HeaderFooterLayout= () => {
   return<>
@@ -20,7 +21,7 @@ const HeaderFooterLayout= () => {
 export const router = createBrowserRouter([
   {
     element: <HeaderFooterLayout />,
-  errorElement: <h1>Erreur 404</h1>,
+  errorElement: <ErrorPage />,
   children: [ 
       {
         path: "/",
