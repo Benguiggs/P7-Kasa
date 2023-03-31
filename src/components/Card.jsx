@@ -4,12 +4,13 @@ import "./CardGrid.scss";
 import "./Card.scss";
 
 
-function Card() {
+function Card(props) {
   return (
     <Link to="/appartement">
+  
     <div className='card'>
-      <img className='card__image' src="" alt="" />
-      <div className="card__subtitle">Titre de la location</div>
+    <img src={props.imageUrl} alt="" />
+      <div className="card__subtitle">{props.title}</div>
       </div>
       </Link>
   )
