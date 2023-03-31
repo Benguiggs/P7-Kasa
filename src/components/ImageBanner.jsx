@@ -1,10 +1,11 @@
 import React from 'react';
 import "../components/ImageBanner.scss"
 
-export function ImageBanner() {
+export function ImageBanner(props) {
+  const  imageUrl  = props.imageUrl ? props.imageUrl: "/aboutBackground.png"; 
   return (
     <div className='Image__banner'>
-    <img src="../AppartementBackground.png" alt="Banniére d'un appartement"/>
+    <img src={imageUrl}/>
 </div>
   );
 }

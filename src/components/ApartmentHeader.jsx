@@ -1,32 +1,37 @@
 import React from 'react';
 import "../components/ApartmentHeader.scss";
 
-export function ApartmentHeader() {
+export function ApartmentHeader({ ApartmentSelected }) {
+
+const {name} = ApartmentSelected.host;
+const [firstName, lastName] = name.split(".");
+
   return (
     <div className='Apartment__header'>
     <div className='Apartment__title'> 
-<h1>Crazy loft on Canal Saint Martin</h1>
-<h2>Paris, île de France</h2>
+<h1>{ApartmentSelected.title}</h1>
+<h2>{ApartmentSelected.location}</h2>
 <div className='apartment__tags'>
-<span>Cozy</span>
-<span>Canal</span>
-<span>Paris 10</span>
+  {ApartmentSelected.tags.map((tag) => (
+  <span key={tag}>{tag}</span>
+  ))}
 </div>
 </div>
 <div className='Apartment__owner'>
 <div className='Apartment__owner__view'>
     <h3>
-    <span>Alexandre</span>
-    <span>Dumas</span>
+    <span>{firstName}</span>
+    <span>{lastName}</span>
     </h3>
-    <div className='Apartment__owner__badge'></div>
+    <div className='Apartment__owner__badge'>
+      <img src={ApartmentSelected.host.picture} alt="" />
+    </div>
 </div>
 <div className='Apartment__owner__stars'>
-<span className='on'> ★</span>
-<span className='on'> ★ </span>
-<span className='on'> ★</span>
-<span className='off'> ★</span>
-<span className='off'> ★</span>
+
+{[1, 2, 3, 4 ,5].map((number) => (
+  <span key={number} className={ApartmentSelected.rating >= number ? "on" : ""}>★</span>
+))}
 </div>
 </div>
 </div>

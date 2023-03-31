@@ -7,7 +7,9 @@ function CardGrid() {
 const [cards, setCards] = useState([]);
 
 
-useEffect(fetchCards, []);
+useEffect(() => {
+  fetchCards();
+}, []);
 
 function fetchCards() {
 fetch("DataBase.json")
@@ -19,7 +21,7 @@ fetch("DataBase.json")
   return (
     <div className='grid'>
 {cards.map((card) => (
-<Card title={card.title} imageUrl ={card.cover} />
+<Card title={card.title} imageUrl={card.cover} id={card.id} key={card.id}/>
   ))}
     </div>
   );

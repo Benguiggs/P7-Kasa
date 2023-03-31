@@ -8,12 +8,12 @@ import "../pages/About.scss";
 function About() {
   return (
     <>
-    <ImageBanner />
+    <ImageBanner  />
     <div className='about__container'>
-    <PanelDescription />
-    <PanelDescription />
-    <PanelDescription />
-    <PanelDescription />
+    <PanelDescription  title="Fiabilité"  content=""/>
+    <PanelDescription  title="Respect"  content=""/>
+    <PanelDescription  title="Services" content="" />
+    <PanelDescription  title="Responsabilité" content="" />
     </div>
     </>
 
