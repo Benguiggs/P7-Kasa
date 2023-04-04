@@ -16,7 +16,6 @@ function About() {
     <PanelDescription  title="Responsabilité" content="" />
     </div>
     </>
-
   );
 }
 

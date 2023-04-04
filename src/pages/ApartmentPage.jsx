@@ -8,30 +8,32 @@ import {useLocation} from "react-router-dom";
 
 function ApartmentPage() {
 const location = useLocation();
-const [ApartmentSelected, setApartmentSelected] = useState(null);
-  useEffect(fetchCardDatas, []);
+const [room, setRoom] = useState(null);
+console.log("room:", room)
+  useEffect(fetchRoomDatas, []);
 
-function fetchCardDatas() {
+function fetchRoomDatas() {
   fetch("DataBase.json")
   .then((res) => res.json())
-  .then ((apartments) => {
-    const ApartmentSelected =
-  apartments.find((apartment) => apartment.id === location.state.apartmentId);
-  setApartmentSelected(ApartmentSelected)
-;})
+  .then((rooms) => {
+  const room = rooms.find((room) => room.id === location.state.apartmentId);
+  setRoom(room);
+})
 .catch(console.error);
 }
 
-if (ApartmentSelected == null) return <div>Loading...</div>;
+if (room == null) return <div>Loading...</div>;
   return (
     <div className='apartment__page'>
-<ImageBanner imageUrl={ApartmentSelected.cover} />
-<ApartmentHeader ApartmentSelected={ApartmentSelected} />
+<ImageBanner pictures={room.pictures}/>
+<ApartmentHeader room={room} />
 <div className='Apartment__area'>
-<PanelDescription title="Description" content={ApartmentSelected.description}/>
-<PanelDescription title="Equipements" content={ApartmentSelected.equipments.map((eq) => (
-  <li>{eq}</li>
-))} />
+<PanelDescription title="Description" content={props.room.description}/>
+<PanelDescription title="Equipements"
+ content={room.equipments.map((eq, i) => (
+ <li key={i}>{eq}</li>
+  ))}
+   />
     </div>
    </div>
   );
