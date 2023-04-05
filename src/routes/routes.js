@@ -8,7 +8,7 @@ import ApartmentPage from "../pages/ApartmentPage";
 import About from "../pages/About";
 import { ErrorPage } from "../pages/ErrorPage"
 
-const HeaderFooterLayout= () => {
+const HeaderFooterlayout= () => {
   return<>
   <Navbar />
   <Main>
@@ -20,7 +20,7 @@ const HeaderFooterLayout= () => {
 
 export const router = createBrowserRouter([
   {
-    element: <HeaderFooterLayout />,
+    element: <HeaderFooterlayout />,
   errorElement: <ErrorPage />,
   children: [ 
       {

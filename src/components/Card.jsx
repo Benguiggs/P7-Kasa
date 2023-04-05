@@ -7,15 +7,15 @@ import "./Card.scss";
 function Card(props) {
   return (
     <Link to="/appartement"
-    state={{
-      cardId: props.id
-    }}
+      state={{
+        cardId: props.id
+      }}
     >
-    <div className='card'>
-    <img src={props.imageUrl} alt="" />
-      <div className="card__subtitle">{props.title}</div>
+      <div className='card'>
+        <img src={props.imageUrl} alt="" />
+        <div className="card__subtitle">{props.title}</div>
       </div>
-      </Link>
+    </Link>
   );
 }
 

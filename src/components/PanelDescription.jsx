@@ -2,10 +2,9 @@ import React, {useState} from 'react';
 import "../components/PanelDescription.scss";
 
 
-
 export function PanelDescription(props){
 
-const [ContentView, setContentView] = useState(false);
+const [ContentView, setContentView] = useState(true);
 
 const showContent = () => {
     setContentView(!ContentView)
