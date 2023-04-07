@@ -9,7 +9,7 @@ export const useRoom = () => {
     useEffect(() => {
       console.log("component was mounted, we fetch rooms")
       const abortController = new AbortController();
-      fetch("DataBase.json", { signal: AbortController.signal })
+      fetch("./DataBase.json", { signal: AbortController.signal })
       .then((res) => res.json())
       .then((res) => setRooms(res))
       .catch(console.error);

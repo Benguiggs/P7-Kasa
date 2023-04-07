@@ -6,7 +6,7 @@ export const useCards = () => {
     useEffect(() => {
       console.log("component was mounted, we fetch cards")
       const abortController = new AbortController();
-      fetch("DataBase.json", { signal: AbortController.signal })
+      fetch("/DataBase.json", { signal: AbortController.signal })
       .then((res) => res.json())
       .then((res) => setCards(res))
       .catch(console.error);
