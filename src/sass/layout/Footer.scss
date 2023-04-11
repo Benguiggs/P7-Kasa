@@ -1,11 +1,22 @@
-@use "../scss/colors.scss" as colors;
 
-.footer {
-    background-color: colors.$contrast-black;
-    color: colors.$contrast-white;
-    padding: 20px;
-    text-align: center;
-    min-height: 100px;
-    display: grid;
-    place-items: center;
+
+footer {
+    @include flex-center;
+    flex-direction: column;
+    height: 10rem;
+    flex-shrink: 0;
+    background-color: black;
+    .footer__logo {
+        margin: 1rem;
+    }
+    .footer__text {
+        color: white;
+        font-size: 1.5rem;
+        @include media-query(medium) {
+            font-size: 0.75rem;
+        }
+        @include media-query(small) {
+            font-size: 0.75rem;
+        }
+    }
 }

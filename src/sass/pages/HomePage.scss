@@ -1,0 +1,25 @@
+
+.gallery {
+    @include flex-center;
+    flex-wrap: wrap;
+    justify-content: space-evenly; 
+    background-color: $background-card;
+    border-radius: 25px;
+    width: 100%;
+    margin: 2.70rem;
+    padding: 3.2rem;
+    gap: 3.15rem 3.75rem;
+    @include media-query(medium) {
+        padding: 3.125rem;
+        gap: 3.15rem 3.75rem;
+        margin: 1.20rem
+    }
+    @include media-query(small) {
+        background: none;
+        padding: 0;
+        gap: 1.20rem;
+        margin: 1.20rem;
+    }
+}
+
+

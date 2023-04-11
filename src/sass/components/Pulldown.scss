@@ -1,0 +1,73 @@
+.pulldown {
+    max-width: 1024px;
+    width: 100%;
+
+    &_header {
+        @include flex-center;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: #ff6060;
+        height: 3rem;
+        border-radius: 5px;
+        padding: 0 1.25rem;
+        font-weight: 500;
+        font-size: 1.5rem;
+        color: white;
+        @include media-query(small) {
+            height: 30px;
+            border-radius: 5px;
+            font-size: 13px;
+            padding: 0 7px 0 13px;
+        }
+    }
+    button {
+        background: none;
+        border: none;
+        height: 3rem;
+        width: 3rem;
+        cursor: pointer;
+        @include media-query(small) {
+            height: 18px;
+            width: 18px;
+        }
+    }
+}
+
+.arrow {
+    transition: transform 0.2s ease-in-out;
+    @include media-query(small) {
+        width: 15px;
+    }
+    &--down {
+        transform: rotate(0deg);
+    }
+
+    &--up {
+        transform: rotate(-180deg);
+    }
+}
+
+.content {
+    max-width: inherit;
+    background-color: #f6f6f6;
+    border-radius: 0 0 5px 5px;
+    color: $color-primary;
+    font-weight: 400;
+    font-size: 1.5rem;
+    padding: 1.5rem 1rem;
+    transition: font-size 0.25s, margin 0.25s, padding 0.25s, opacity 0.4s 0.25s;
+    @include media-query(small) {
+        font-size: 0.75rem;
+        padding: 1.25rem 0.4375rem 1.25rem 0.8125rem;
+    }
+    &--hidden {
+        color: $color-primary;
+        font-weight: 400;
+        font-size: 0;
+        margin: 0;
+        opacity: 0;
+        padding: 0;
+        transition: opacity 0.25s, font-size 0.4s 0.25s, margin 0.4s 0.25s,
+            padding 0.4s 0.25s;
+    }
+}

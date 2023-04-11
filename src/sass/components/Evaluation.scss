@@ -1,0 +1,6 @@
+.evaluation {
+    color: $color-primary;
+    &--empty {
+        color: $color-lightgray;
+    }
+}

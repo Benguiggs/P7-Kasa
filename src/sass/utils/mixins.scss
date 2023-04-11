@@ -1,0 +1,35 @@
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-center-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin media-query($break-point) {
+    @if $break-point== large {
+        @media (max-width: 1440px) {
+            @content;
+        }
+    }
+    @if $break-point == medium {
+        @media (max-width: 1024px) {
+            @content;
+        }
+    }
+    @if $break-point== small {
+        @media (max-width: 768px) {
+            @content;
+        }
+    }
+    @if $break-point== very-small {
+        @media (max-width: 375px) {
+            @content;
+        }
+    }
+}

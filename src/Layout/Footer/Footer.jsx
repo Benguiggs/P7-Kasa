@@ -1,15 +1,16 @@
-import React from 'react';
-import "./Footer.scss";
+import { Link } from "react-router-dom";
+import logo from "../../assets/logos/logo_b&w.png";
 
-function Footer() {
-  return (
-    <div className='footer'>
-        <div className='footer__logo'>
-        <img src="logo_b&w.png" alt="Logo de l'agence Kasa" width="100"/>
-        </div>
-        <div className='footer_quote'>© 2020 Kasa. All rights reserved</div>
-    </div>
-  )
+export default function Footer() {
+    const currentYear = new Date().getFullYear();
+    return (
+        <footer>
+            <Link to="/">
+                <img src={logo} alt="Kasa" className="footer__logo" />
+            </Link>
+            <div className="footer__text">
+                &#169; {currentYear} Kasa. All rights reserved
+            </div>
+        </footer>
+    );
 }
-
-export default Footer

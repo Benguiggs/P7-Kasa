@@ -1,26 +1,14 @@
 import React from "react";
 import { createBrowserRouter, Outlet } from "react-router-dom";
 import HomePage from "../pages/HomePage";
-import Navbar from "../components/Navbar";
-import Footer from "../layout/Footer";
-import Main from "../layout/Main";
 import ApartmentPage from "../pages/ApartmentPage";
 import About from "../pages/About";
 import { ErrorPage } from "../pages/ErrorPage"
 
-const HeaderFooterlayout= () => {
-  return<>
-  <Navbar />
-  <Main>
-  <Outlet />
-  </Main>
-  <Footer />
-  </>
-}
 
 export const router = createBrowserRouter([
   {
-    element: <HeaderFooterlayout />,
+  
   errorElement: <ErrorPage />,
   children: [ 
       {
@@ -28,7 +16,7 @@ export const router = createBrowserRouter([
         element: <HomePage />
       },
       {
-        path: "/appartement",
+        path: "/apartement",
         element: <ApartmentPage />
       },
       {

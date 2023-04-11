@@ -1,22 +1,15 @@
-import React from 'react';
+
 import { Link } from "react-router-dom";
-import Navbar from "../components/Navbar";
-import Main from "../layout/Main"
-import "../pages/ErrorPage.scss";
 
-
-export function ErrorPage() {
+export  default function ErrorPage() {
   return (
-    <>
-      <Navbar />
-      <Main>
-        <div className='error__page'>
-          <h1>404</h1>
-          <h2>Ooops! La page que vous demandez n'existe pas</h2>
-          <Link to="/">Retourner sur la page d'accueil</Link>
-        </div>
-      </Main>
-    </>
+   <section className="error_page">
+    <h2 className="error_title">404</h2>
+    <p> Oups! La page que vous demandez n'existe pas.</p>
+    <Link to="/" className="error_homepage">
+      Retourner sur la page d'accueil
+    </Link>
+   </section>
   );
 }
 

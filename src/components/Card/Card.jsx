@@ -1,22 +1,11 @@
-import React from 'react';
 import { Link } from "react-router-dom";
-import "./CardGrid.scss";
-import "./Card.scss";
 
-
-function Card(props) {
+export default function Card(props) {
   return (
-    <Link to="/appartement"
-      state={{
-        cardId: props.id
-      }}
-    >
-      <div className='card'>
-        <img src={props.imageUrl} alt="" />
-        <div className="card__subtitle">{props.title}</div>
-      </div>
-    </Link>
+    <article className="card" style={{ backgroundImage: `url(${props.data.cover})` }}>
+      <Link to={`/Apartment/${props.data.id}`}>
+        <h3>{props.data.title}</h3>
+      </Link>
+    </article>
   );
 }
-
-export default Card;

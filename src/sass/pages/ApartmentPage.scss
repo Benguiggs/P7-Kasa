@@ -1,0 +1,120 @@
+.flat {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: $color-primary;
+  margin-bottom: 10rem;
+
+  &__header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      @include media-query(small) {
+          flex-direction: column;
+      }
+      &__title-wrap {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+      }
+      &__host-wrap {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          @include media-query(small) {
+              flex-direction: row-reverse;
+              align-items: center;
+              margin: 18px 0;
+          }
+      }
+      &__title {
+          font-weight: 500;
+          font-size: 2.25rem;
+          margin-bottom: 0.625rem;
+          @include media-query(small) {
+              font-size: 18px;
+          }
+      }
+      &__location {
+          font-size: 1.125rem;
+          margin-bottom: 1.25rem;
+          @include media-query(small) {
+              font-size: 14px;
+              margin-bottom: 15px;
+          }
+      }
+      &__host {
+          @include flex-center;
+          flex-direction: row;
+          width: 11.25rem;
+          @include media-query(small) {
+              width: 5.625rem;
+          }
+          &__name {
+              margin-right: 0.625rem;
+              font-size: 1.125em;
+              text-align: right;
+              line-height: 1.5em;
+              overflow-wrap: break-word;
+              @include media-query(small) {
+                  font-size: 12px;
+              }
+          }
+          &__picture {
+              border-radius: 50%;
+              height: 4rem;
+              width: 4rem;
+              @include media-query(small) {
+                  height: 2rem;
+                  width: 2rem;
+              }
+          }
+      }
+      &__header__evaluation {
+          display: flex;
+          font-size: 2.625rem;
+          margin: 0;
+          gap: 2px;
+          @include media-query(small) {
+              font-size: 1.5rem;
+          }
+      }
+  }
+
+  &__content {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 2em;
+      margin: 1.25rem 0 2.5rem 0;
+      height: 100%;
+      @include media-query(small) {
+          flex-direction: column;
+          gap: 1.25rem;
+          margin: 0 0 2.5rem 0;
+      }
+      & .pulldown {
+          max-width: 36.25rem;
+          @include media-query(small) {
+              max-width: 100%;
+          }
+          &_header {
+              border-radius: 10px;
+              font-size: 1.125rem;
+              @include media-query(small) {
+                  height: 30px;
+                  border-radius: 5px;
+                  font-size: 0.8125rem;
+                  padding: 0 0.4375rem 0 0.8125rem;
+              }
+          }
+          .content {
+              font-size: 1.125rem;
+              @include media-query(small) {
+                  font-size: 0.75rem;
+                  padding: 1.25rem 0.4375rem 1.25rem 0.8125rem;
+              }
+          }
+      }
+  }
+}

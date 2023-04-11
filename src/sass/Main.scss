@@ -1,0 +1,18 @@
+
+@import "../../src/sass/utils/colors";
+@import "../../src/sass/utils/mixins";
+@import "../sass/base/base";
+@import "./layout/Header.scss";
+@import "./layout/footer.scss";
+
+@import "./components/banner";
+@import "./components/card";
+@import "./components/pulldown";
+@import "./components/evaluation";
+@import "./components/carousel";
+@import "./components/tags";
+
+@import "./pages/HomePage.scss";
+@import "./pages/About.scss";
+@import "./pages/ApartmentPage.scss";
+@import "./pages/ErrorPage.scss";

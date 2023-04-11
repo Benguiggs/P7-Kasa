@@ -1,0 +1,17 @@
+.about {
+    @include flex-center-column;
+    width: 100%;
+    padding: 1.875rem 0 11rem 0;
+    gap: 1.875rem;
+    @include media-query(small) {
+        padding-top: 1.25rem;
+    }
+}
+
+.about_banner {
+    
+    @include media-query(small) {
+        height: 220px;
+        border-radius: 10px;
+    }
+}
