@@ -7,6 +7,7 @@ import Error from "../Error/ErrorPage";
 
 
 
+
 export default function flats(props) {
     let { id } = useParams();
     let data = props.datas.find((data) => data.id === id);
@@ -36,7 +37,7 @@ export default function flats(props) {
                                 alt="Profile picture"
                             ></img>
                         </div>
-                        <div className="flat__header__rating">
+                        <div className="flat__header__evaluation">
                             <Evaluation value={data.rating} />
                         </div>
                     </div>

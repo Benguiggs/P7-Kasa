@@ -1,3 +1,6 @@
+import Vector from "../../assets/icons/Vector.png";
+
+
 export default function Evaluation(props) {
     const value = props.value;
     const evaluation = [1, 2, 3, 4, 5];
