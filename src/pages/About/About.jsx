@@ -7,7 +7,7 @@ export default function About() {
     return (
         <>
             <Banner
-                class="about_banner"
+                class="about_background"
                 image={image}
                 alt="Forest and mountains panaroma"
             />

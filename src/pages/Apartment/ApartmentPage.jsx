@@ -36,8 +36,8 @@ export default function flats(props) {
                                 alt="Profile picture"
                             ></img>
                         </div>
-                        <div className="flat__header__evaluation">
-                            <Evaluation value={data.evaluation} />
+                        <div className="flat__header__rating">
+                            <Evaluation value={data.rating} />
                         </div>
                     </div>
                 </header>

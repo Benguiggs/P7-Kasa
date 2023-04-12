@@ -1,39 +1,37 @@
-
-
-.banner_home {
-    @include flex-center;
-    height: 225px;
-    width: 100%;
-    border-radius: 25px;
-    overflow: hidden;
+.about_banner {    @include media-query(small) {
+    height: 220px;
+    border-radius: 10px;
+}
+}.banner_home {
+@include flex-center;
+height: 225px;
+width: 100%;
+border-radius: 25px;
+overflow: hidden;
+position: relative;
+filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.20));
+&--home {
+    @include media-query(small) {
+        height: 110px;
+        border-radius: 10px;
+    }
+}
+&--about {
+    @include media-query(small) {
+        border-radius: 10px;
+    }
+}    img {
+    position: absolute;
+    object-fit: cover;
+    filter: brightness(75%);
+}    h2 {
+    font-weight: 500;
+    font-size: 3rem;
+    color: white;
     position: relative;
-    filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.20));
-    &--home {
-        @include media-query(small) {
-            height: 110px;
-            border-radius: 10px;
-        }
+    margin: 1.25rem;
+    @include media-query(small) {
+        font-size: 1.5rem;
     }
-    &--about {
-        @include media-query(small) {
-            border-radius: 10px;
-        }
-    }
-
-    img {
-        position: absolute;
-        object-fit: cover;
-        filter: brightness(75%);
-    }
-
-    h2 {
-        font-weight: 500;
-        font-size: 3rem;
-        color: white;
-        position: relative;
-        margin: 1.25rem;
-        @include media-query(small) {
-            font-size: 1.5rem;
-        }
-    }
+}
 }

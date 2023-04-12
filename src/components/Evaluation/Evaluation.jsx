@@ -7,11 +7,11 @@ export default function Evaluation(props) {
             {evaluation.map((rangeElem, index) =>
                 value >= rangeElem ? (
                     <span className="evaluation" key={`${rangeElem}-${index}`}>
-                        &#9733;
+                    <img src="" alt="" />  
                     </span>
                 ) : (
                     <span className="empty--evaluation" key={`${rangeElem}-${index}`}>
-                        &#9733;
+                       <img src="" alt="" /> 
                     </span>
                 )
             )}

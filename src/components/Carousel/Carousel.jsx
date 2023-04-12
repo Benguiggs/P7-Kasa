@@ -25,10 +25,10 @@ export default function Carousel({ pictures }) {
             ))}
             {pictures.length > 1 ? (
                 <>
-                    <button className="btn_next" onClick={btnNext}>
+                    <button className="button btn_next" onClick={btnNext}>
                         <img src={icon_arrow} alt="button next" />
                     </button>
-                    <button className="btn_previous" onClick={btnPrevious}>
+                    <button className="button btn_previous" onClick={btnPrevious}>
                         <img src={icon_arrow} alt="button previous" />
                     </button>
                     <div className="counter">
