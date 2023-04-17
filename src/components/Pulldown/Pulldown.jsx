@@ -1,26 +1,21 @@
 import { useState } from "react";
-import icon_arrow from "../../assets/icons/arrow.svg"
+import icon_arrow from "../../assets/icons/arrow.png"
 
 export default function Pulldown(props) {
     const [isExtend, setExtend] = useState(false);
+
     return (
         <div className="pulldown">
             <div className="pulldown_header">
                 {props.title}
                 <div>
-                    {isExtend ? (
-                        <button onClick={() => setExtend(false)}>
-                            <img className="arrow_up"
-                                src={icon_arrow}
-                                alt="open button" />
-                        </button>
-                    ) : (
-                        <button onClick={() => setExtend(true)}>
-                            <img className="arrow_down"
-                                src={icon_arrow}
-                                alt="close button" />
-                        </button>
-                    )}
+                    <button onClick={() => setExtend(previousState => !previousState)}>
+                        <img
+                            className={`arrow ${isExtend ? "arrow--up" : "arrow--down"}`}
+                            src={icon_arrow}
+                            alt={isExtend ? "close button" : "open button"}
+                        />
+                    </button>
                 </div>
             </div>
             {Array.isArray(props.content) ? (

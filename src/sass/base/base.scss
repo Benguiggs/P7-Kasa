@@ -9,7 +9,7 @@ html, body {
     width: 100%;
     font-family: Montserrat;
     font-weight: 500;
-    padding: 5px;
+   
 }
 
 #root {
@@ -28,7 +28,7 @@ main {
     max-width: 1300px;
     width: 100%;
     @include media-query(small) {
-        padding: 0.25rem;
+        padding: 0.5rem;
     }
 }
 

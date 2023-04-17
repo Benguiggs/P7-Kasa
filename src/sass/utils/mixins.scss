@@ -27,7 +27,7 @@
             @content;
         }
     }
-    @if $break-point== very-small {
+    @if $break-point== x-small {
         @media (max-width: 375px) {
             @content;
         }
