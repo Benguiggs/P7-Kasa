@@ -1,5 +1,8 @@
 import { useState } from "react";
-import icon_arrow from "../../assets/icons/arrow.png"
+import icon_arrow from "../../assets/icons/Arrow.svg";
+
+
+
 
 export default function Carousel({ pictures }) {
     const [isActive, setActive] = useState(0);
