@@ -1,20 +1,15 @@
 import { useState } from "react";
 import icon_arrow from "../../assets/icons/Arrow.svg";
 
-
-
-
 export default function Carousel({ pictures }) {
     const [isActive, setActive] = useState(0);
 
     const btnNext = () => {
         setActive(isActive === pictures.length - 1 ? 0 : isActive + 1);
     };
-
     const btnPrevious = () => {
         setActive(isActive === 0 ? pictures.length - 1 : isActive - 1);
     };
-
     return (
         <section className="carousel">
             {pictures.map((picture, index) => (
