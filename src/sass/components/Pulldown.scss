@@ -6,13 +6,13 @@
         @include flex-center;
         flex-direction: row;
         justify-content: space-between;
-        background-color: #ff6060;
+        background-color: $color-primary;
         height: 3rem;
         border-radius: 5px;
         padding: 0 1.25rem;
         font-weight: 500;
         font-size: 1.5rem;
-        color: white;
+        color: $contrast-white;
         @include media-query(small) {
             height: 30px;
             border-radius: 5px;
@@ -51,7 +51,7 @@
 
 .content {
     max-width: inherit;
-    background-color: #f6f6f6;
+    background-color: $background-card;
     border-radius: 0 0 5px 5px;
     color: $color-primary;
     font-weight: 400;

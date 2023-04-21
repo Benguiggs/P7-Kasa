@@ -5,12 +5,12 @@ footer {
     flex-direction: column;
     height: 10rem;
     flex-shrink: 0;
-    background-color: black;
+    background-color: $contrast-black;
     .footer__logo {
         margin: 1rem;
     }
     .footer__text {
-        color: white;
+        color: $contrast-white;
         font-size: 1.5rem;
         @include media-query(medium) {
             font-size: 0.75rem;
